@@ -1,0 +1,12 @@
+[Unit]
+Description=SMART Data (C5) Monitor on ANANKE
+#Requires=influxdb.service
+#After=influxdb.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -x /home/p27182/smartmon/smartmon.sh
+
+[Install]
+WantedBy=default.target

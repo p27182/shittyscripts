@@ -1,0 +1,12 @@
+[Unit]
+Description=HDD Temp Mon for md126 on ANANKE
+#Requires=influxdb.service
+#After=influxdb.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -x /home/p27182/hddmon/hddmon126.sh
+
+[Install]
+WantedBy=default.target

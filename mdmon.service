@@ -1,0 +1,12 @@
+[Unit]
+Description=MD Monitor
+#Requires=influxdb.service
+#After=influxdb.service
+
+[Service]
+Type=simple
+User=root
+ExecStart=/bin/bash -x /home/p27182/mdmon/mdmon.sh
+
+[Install]
+WantedBy=default.target
